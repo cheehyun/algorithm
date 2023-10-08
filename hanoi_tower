@@ -1,0 +1,27 @@
+using System;
+using System.Text;
+
+namespace programers
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            StringBuilder sb = new StringBuilder();
+            int disk_count = int.Parse(Console.ReadLine());
+            Console.WriteLine(Math.Pow(2, disk_count) - 1);
+            hanoi(disk_count, 1, 2, 3, sb);
+            Console.WriteLine(sb);
+        }
+        static void hanoi(int c, int start, int center, int end, StringBuilder s)
+        {
+            if (c == 0)
+            {
+                return; 
+            }
+            hanoi(c - 1, start, end, center, s);
+            s.AppendLine(start + " " + end);
+            hanoi(c - 1, center, start, end, s);
+        }
+    }
+}
