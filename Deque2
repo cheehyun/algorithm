@@ -21,7 +21,10 @@ namespace backjoon
             {
                 string[] temp = Console.ReadLine().Split();
 
-                if (temp[0] == "1") { stack.Push(int.Parse(temp[1])); }
+                if (temp[0] == "1") 
+                { 
+                    stack.Push(int.Parse(temp[1]));
+                }
 
                 else if (temp[0] == "2")
                 {
@@ -33,18 +36,33 @@ namespace backjoon
                     else { sb.AppendLine("-1"); }
                 }
 
-                else if (temp[0] == "3") { sb.AppendLine(stack.Count().ToString()); }
+                else if (temp[0] == "3") 
+                {
+                    sb.AppendLine(stack.Count().ToString()); 
+                }
 
                 else if (temp[0] == "4")
                 {
-                    if (stack.Count() == 0) { sb.AppendLine("1"); }
-                    else { sb.AppendLine("0"); }
+                    if (stack.Count() == 0) 
+                    {
+                        sb.AppendLine("1"); 
+                    }
+                    else 
+                    {
+                        sb.AppendLine("0"); 
+                    }
                 }
 
                 else if (temp[0] == "5")
                 {
-                    if (stack.Count() > 0) { sb.AppendLine(stack.Peek().ToString()); }
-                    else { sb.AppendLine("-1"); }
+                    if (stack.Count() > 0) 
+                    { 
+                        sb.AppendLine(stack.Peek().ToString()); 
+                    }
+                    else 
+                    { 
+                        sb.AppendLine("-1"); 
+                    }
                 }
             }
             Console.Write(sb);
